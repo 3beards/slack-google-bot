@@ -11,7 +11,7 @@ module SlackGoogleBot
                                         key: ENV['GOOGLE_API_KEY'],
                                         cx: ENV['GOOGLE_CSE_ID']
                                       })
-        result = results['items'].first if results['items']
+        result = results['items']
         if result
           message = result['title'] + "\n" + result['link']
         else
